@@ -1,0 +1,95 @@
+/* pages/knowledge/konwledge.wxss */
+page {
+	background-color: #fff;
+}
+
+
+.page-container {
+	background: linear-gradient(rgb(52, 204, 127) 0, #fff 20%);
+
+	.knowledge-title {
+		font-size: 32rpx;
+		font-weight: 700;
+		font-style: italic;
+		color: #222;
+		text-align: center;
+	}
+
+	.content {
+		padding: 30rpx;
+		.article-item {
+			display: flex;
+			// height: 220rpx;
+			// background: #f40;
+			border-radius: 22rpx;
+			box-shadow: 0 0 3rpx #ececec;
+			margin-bottom: 22rpx;
+			padding: 12rpx;
+			border-bottom: 1px solid #ececec;
+			&:hover {
+				background: #ececec;
+			}
+			.cover {
+				width: 182rpx;
+				height: 182rpx;
+				border-radius: 12rpx;
+				// margin-right: 22rpx;
+				object-fit: cover;
+				margin-left: auto;
+			}
+			.left {
+				max-width: 460rpx;
+				flex-grow: 1;
+				.title {
+					font-size: 28rpx;
+					color: #222;
+					font-weight: 700;
+					max-lines: 1;
+					line-height: 28rpx;
+					height: 28rpx;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-bottom: 13rpx;
+				}
+				.dec {
+					color: #666;
+					line-height: 30rpx;
+					font-size: 24rpx;
+					height: 112rpx;
+					max-lines: 4;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+		.article-column {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			// background-color: #008c8c;
+			margin-bottom: 22rpx;
+			padding: 12rpx;
+			border-radius: 22rpx;
+			justify-content: start;
+			border-bottom: 1px solid #ececec;
+			&:hover {
+				background: #ececec;
+			}
+			.cover {
+				width: 100%;
+				height: 280rpx;
+				border-radius: 12rpx;
+			}
+			.title {
+				font-weight: 700;
+				font-size: 26rpx;
+				color: #222;
+				margin-bottom: 13rpx;
+				line-height: 26rpx;
+				max-lines: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}

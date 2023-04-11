@@ -1,0 +1,85 @@
+<!--pages/mine.wxml-->
+
+<auth>
+
+	<view class="page-container" >
+		<view style="padding-top: {{marginTop + 'px'}}" class="user-info">
+			<appbar title="" />
+
+			<view style="height: {{lineHeight + 'px'}};" class="title"> </view>
+
+
+			<block wx:if="{{!userInfo.maOpenId}}">
+				<image bindtap="goLogin" class="user-avatar" src="{{userInfo.avatarUrl}}" />
+				<view bindtap="goLogin" class="user-name">未登录，请先登录</view>
+			</block>
+
+			<block wx:if="{{userInfo.maOpenId.length> 0}}">
+				<image class="user-avatar" src="{{userInfo.avatarUrl}}" />
+				<view class="user-name">{{userInfo.nickName}}</view>
+			</block>
+
+			<block>
+				<view class="user-data">
+					<view bindtap="goIntegral" class="left">
+						<view class="l-title">
+							<text>积分商城</text>
+							<image class="icon" src="../../static/img/arrow_right.png" />
+						</view>
+						<view class="my-integral">我的积分：</view>
+						<view class="integral-num">{{userInfo.integral || 0}}</view>
+					</view>
+					<view class="right">
+						<view bindtap="goIntegralList" class="item">
+							<view class="r-title">
+								<text>答题奖励</text>
+								<image class="icon" src="../../static/img/arrow_right.png" />
+							</view>
+						</view>
+						<view  bindtap="goTest" class="item study {{isStudy? 'on': ''}}">
+							<view class="r-title">
+								<text>每日学习</text>
+								<image class="icon" src="../../static/img/arrow_right.png" />
+
+							</view>
+							<view class="study-status">{{isStudy?'已完成' :'未完成'}}</view>
+						</view>
+
+					</view>
+				</view>
+
+			</block>
+		</view>
+
+		<view class="content">
+			<view class="info-item">
+				<image class="icon" src="../../static/img/integral.png" />
+				<text>兑换记录</text>
+				<image src="../../static/img/arrow_right.png" class="arrow-right" />
+			</view>
+			<view class="info-item">
+				<image class="icon" src="../../static/img/record.png" />
+				答题记录
+
+				<image src="../../static/img/arrow_right.png" class="arrow-right" />
+			</view>
+			<view class="info-item">
+				<image class="icon" src="../../static/img/info.png" />
+				<text>关于我们</text>
+
+
+				<image src="../../static/img/arrow_right.png" class="arrow-right" />
+
+			</view>
+			<view bindtap="goFeedback" class="info-item">
+				<image class="icon" src="../../static/img/feedback.png" />
+				<text>反馈问题</text>
+
+				<image src="../../static/img/arrow_right.png" class="arrow-right" />
+
+			</view>
+		</view>
+
+	</view>
+
+</auth>

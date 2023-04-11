@@ -1,0 +1,6 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "appbar": "../../components/appbar/appbar"
+    }
+}

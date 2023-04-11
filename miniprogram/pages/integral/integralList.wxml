@@ -1,0 +1,28 @@
+<auth>
+<view class="integral-list-page">
+	<view class="my-account">
+		<view class="title">账户积分</view>
+
+		<view class="integral">{{userInfo.integral}}</view>
+
+		<button bindtap="goTest" class="get-btn">获取积分！</button>
+	</view>
+
+	<view class="integral-area">
+		<view class="integral-rel" wx:for="{{integralList}}" wx:key="index">
+			<view class="rel-left">
+				<view>{{item.info}}</view>
+				<view class="time">{{item.time}}</view>
+			</view>
+
+			<view class="rel-right {{item.type == '1'? 'on': '' }}">
+				{{item.type == '1'? '-': '+' }} {{item.num}} 积分
+			</view>
+
+		</view>
+	</view>
+
+	
+</view>
+
+</auth>

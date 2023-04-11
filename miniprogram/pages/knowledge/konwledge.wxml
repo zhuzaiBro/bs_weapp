@@ -1,0 +1,26 @@
+<view class="page-container" style="padding-top: {{marginTop + lineHeight + 'px'}}">
+	<!-- <view style="height: {{lineHeight + 'px'}};" class="knowledge-title">
+
+	</view> -->
+	<appbar title="知识库" bg_color="{{isLow?'linear-gradient(rgb(52, 204, 127) 0, #fff 100%)':'transparent'}}" />
+
+	<view class="content">
+		<block wx:for="{{article_list}}" wx:key="{{index}}">
+			<view class="article-item" data-item="{{item}}" bindtap="goArticle" wx:if="{{index % 3 > 0}}">
+				<view class="left">
+					<view class="title">{{item.title}}</view>
+					<view class="dec">{{item.description}}</view>
+				</view>
+				<image class="cover" src="{{item.picUrl || 'https://cdn.discosoul.com.cn/farm-130939706331abce76d4c7454395b2e75e17fdd050.jpg'}}" />
+
+			</view>
+
+			<view class="article-column" data-item="{{item}}" bindtap="goArticle" wx:else>
+				<view class="title">{{item.title}}</view>
+				<image class="cover" src="{{item.picUrl || 'https://cdn.discosoul.com.cn/farm-130939706331abce76d4c7454395b2e75e17fdd050.jpg'}}" />
+			</view>
+
+		</block>
+
+	</view>
+</view>

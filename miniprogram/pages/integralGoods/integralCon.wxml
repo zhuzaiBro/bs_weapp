@@ -1,0 +1,49 @@
+<view class="integral-page">
+
+	<appbar title="积分商品详情" />
+
+	<swiper indicator-active-color="#fff" indicator-color="#ececec" class="banner">
+		<swiper-item wx:for="{{goodInfo.banners}}" wx:key="index">
+			<view class="img-item">
+				<image src="{{item}}" />
+			</view>
+		</swiper-item>
+	</swiper>
+
+
+	<view class="content">
+
+		<view class="block">
+			<view class=".integral-line">
+				<view class="integral">
+					{{goodInfo.integral}}
+
+				</view>
+
+				<button class="share-btn" open-type="share" class="share-btn">
+					分享
+					<image src="../../static/img/share.png" />
+				</button>
+			</view>
+			<view class="good-name-line">
+				{{goodInfo.name}}
+			</view>
+
+		</view>
+
+		<view class="detail-title">
+			<view class="info">详情介绍</view>
+		</view>
+		<view class="block detail">
+			<import src="../../wxParse/wxParse" />
+			<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+
+		</view>
+
+	</view>
+
+	<button bindtap="confirmExchange" class="buy-btn">
+		立即兑换
+	</button>
+
+</view>

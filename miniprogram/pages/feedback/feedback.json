@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "反馈",
+    "usingComponents": {
+        "auth": "../../components/authorization/authorization"
+    }
+
+}

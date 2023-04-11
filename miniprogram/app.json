@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/mine/mine",
+        "pages/examination/examination",
+        "pages/knowledge/konwledge",
+        "pages/article/article",
+        "pages/login/login",
+        "pages/feedback/feedback",
+        "pages/integralGoods/integralList",
+        "pages/examination/test",
+        "pages/recognize/recognize",
+        "pages/integralGoods/integralCon",
+        "pages/integral/integralList"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "selectedColor": "#34cc7f",
+        "list": [
+            {
+                "text": "识别",
+                "iconPath": "./static/tabbar/home.png",
+                "selectedIconPath": "./static/tabbar/home_a.png",
+                "pagePath": "pages/index/index"
+            },
+            {
+                "text": "科教",
+                "iconPath": "./static/tabbar/science.png",
+                "selectedIconPath": "./static/tabbar/science_a.png",
+                "pagePath": "pages/knowledge/konwledge"
+            },
+            {
+                "text": "测试",
+                "iconPath": "./static/tabbar/examing.png",
+                "selectedIconPath": "./static/tabbar/examing_a.png",
+                "pagePath": "pages/examination/examination"
+            },
+            {
+                "text": "我的",
+                "iconPath": "./static/tabbar/mine.png",
+                "selectedIconPath": "./static/tabbar/mine_a.png",
+                "pagePath": "pages/mine/mine"
+            }
+        ]
+    }
+}

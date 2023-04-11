@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "考试",
+    "usingComponents": {
+        "auth": "../../components/authorization/authorization"
+    }
+}

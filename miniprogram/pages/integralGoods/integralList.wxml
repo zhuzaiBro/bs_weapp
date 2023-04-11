@@ -1,0 +1,42 @@
+<view class="page">
+	<view class="header-search"  style="top: {{marginTop + 'px'}}; height: {{lineHeight + 'px'}};">
+		<image bindtap="goback" src="https://cdn.discosoul.com.cn/farm-13093970632bf9c0621806432aa951c6fdfa76e22c.png" class="back-icon" />
+	</view>
+	<view class="my-account">
+		<text class="my-integral">{{ userInfo && userInfo.integral || 0}}</text>
+		<text style="font-size: 28rpx;text-indent: 12rpx;"> 积分</text>
+
+		<view bindtap="goDetail" class="right">
+			<view bindtap="$router.push('/pages/user/signIn/Integral/index')" class="integral-item">
+				<image src="https://image.dayouqiantu.cn/buy.png" />
+				<text>积分明细</text>
+
+			</view>
+		</view>
+	</view>
+	<view class="integral-wrapper">
+		<view class="integral-container">
+			<view data-item="{{item}}" bindtap="goGood" class="integral-good" wx:for="{{integralGoods}}" wx:key="index">
+				<image class="cover" src="{{item.banners[0]}}" />
+
+				<view class="desc">
+					<view class="title">
+						{{item.name}}
+					</view>
+
+					<view class="integral">
+						{{item.integral}}积分
+					</view>
+
+					<view class="exchange">
+						<text>还剩：{{item.stock}}</text>
+						<button>兑换</button>
+					</view>
+				</view>
+
+
+			</view>
+		</view>
+	</view>
+
+</view>

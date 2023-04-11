@@ -1,0 +1,54 @@
+<view class="recognize-page">
+
+	<view class="recognize-title">
+		欢迎使用{{typeMap[currentIndex]}}识别！
+	</view>
+	<swiper bindchange="handleSwiper" style="height: 590rpx;" current="{{currentIndex}}">
+
+		<swiper-item class="voice-recognize">
+
+			<image class="voice-img" src="../../static/img/recognize.png" />
+
+			<view class="rec-animation">
+				<view style="background: {{item}}; --key_delay--:{{index * 0.6}}s;" wx:for="{{['#f40','#008c8c','#edf','#f40','#008c8c','#edf']}}" wx:key="index" class="child {{isRecording ? 'on': ''}}">
+
+				</view>
+			</view>
+			<view style="height: 32rpx; text-align: center; font-size: 28rpx; line-height: 32rpx;">{{isRecording ? '我在听~' : ''}}</view>
+
+
+			<button class="voice-btn btn" bindtouchstart="openRecording" bindtouchend="shutRecording">按住录音</button>
+
+
+		</swiper-item>
+
+		<swiper-item class="pic-recognize">
+			<image class="voice-img" src="../../static/img/recognize.png" />
+
+			<view>
+
+			</view>
+			<button class="pic-btn btn" bindtap="recognizeType">点击拍照</button>
+
+		</swiper-item>
+
+		<swiper-item class="word-recognize">
+			<image class="voice-img" src="../../static/img/recognize.png" />
+
+			<input class="inp" model:value="{{word}}"/>
+
+			<button class="pic-btn btn" bindtap="getResult">点击识别</button>
+		</swiper-item>
+
+	</swiper>
+	<view class="result-area">
+		<view>{{word}}</view>
+		<!-- <input bindinput="handleInput" model:value="{{result}}"/> -->
+		<view wx:for="{{result}}" wx:key="index">
+			<view>{{item.name}}</view>
+
+			<view>{{item.lajitip || item.explain}}</view>
+		</view>
+
+	</view>
+</view>

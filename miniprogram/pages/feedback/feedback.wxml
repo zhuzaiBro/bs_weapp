@@ -1,0 +1,34 @@
+<auth>
+
+
+	<view>
+		<view class="feedback-title">
+			意见反馈
+		</view>
+		<view class="feedback-content">
+			<textarea class="feedback-textarea" placeholder="我们会认真对待您的投诉和建议~" model:value="{{content}}" />
+		</view>
+
+		<view class="feedback-title">
+			反馈图片
+		</view>
+		<view class="feedback-image-box">
+			<view class="feedback-image-item" wx:for="{{imageList}}">
+				<view data-index="{{index}}" bindtap="delImage" class="close-btn">
+					<image class="delete-icon" src="../../static/img/delete.png" />
+				</view>
+				<view class="image-box">
+					<image src="{{item.url}}" mode="aspectFill"></image>
+				</view>
+			</view>
+			<!-- 添加图片的icon -->
+			<view wx:if="{{imageList.length < 5}}" class="feedback-image-item" bindtap="_addImage">
+				<view class="image-box">
+					<image class="upload-img" src="../../static/img/upload.png" />
+				</view>
+			</view>
+		</view>
+
+		<button class="feedback-buttom" type="primary" bindtap="_submitFeedback">提交反馈意见</button>
+	</view>
+</auth>

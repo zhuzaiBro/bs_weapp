@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="bg">
+
+    <image src="https://img2.baidu.com/it/u=341037117,17307361&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500" />
+    <view wx:if="{{userInfo.id}}" class="say-hello">
+
+      你好{{userInfo.nickName}}
+      <image class="avatar" src="{{userInfo.avatarUrl}}" />
+      ,又是元气满满的一天
+
+    </view>
+
+  </view>
+
+
+  <view class="banner-list">
+    <swiper class="banner" current="{{currnetIndex}}" indicator-active-color="#fff" indicator-color="#ececec" bindchange="handleSwiper">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item class="banner-item" item-id="{{index}}">
+          <view class="question-img" wx:if="{{item.url}}">
+            <image src="{{item.url}}" />
+          </view>
+        </swiper-item>
+      </block>
+
+    </swiper>
+  </view>
+
+  <view class="box-area">
+
+    <navigator open-type="navigate" target="self" url="/pages/integralGoods/integralList" class="recycle-item">
+      <view class="title">积分兑换</view>
+      <view>回收兑换积分，变废为宝</view>
+      <view class="img-bg">
+        <image class="icon" src="../../static/img/circle--right.png"/>
+        <image class="pic" src="../../static/img/recycle.png" />
+      </view>
+    </navigator>
+
+    <navigator open-type="switchTab" target="self" url="/pages/examination/examination"  class="recycle-item">
+      <view class="title">获得积分</view>
+      <view>每日答题获得积分</view>
+      <view class="img-bg">
+        <image class="icon" src="../../static/img/circle--right.png"/>
+        <image class="pic" src="../../static/img/correct.png" />
+      </view>
+    </navigator>
+
+  </view>
+
+  <view class="biz-area">
+    <view data-type="0" bindtap="goRecognize" class="biz-item">
+      <image class="icon" src="../../static/img/voice.png" />
+      <text>语音识别</text>
+    </view>
+    <view data-type="1" bindtap="goRecognize" class="biz-item big">
+      <image class="icon" src="../../static/img/camera.png" />
+      拍照识别
+    </view>
+    <view data-type="2" bindtap="goRecognize" class="biz-item">
+      <image style="height: 40rpx; padding: 10rpx 0;" class="icon" src="../../static/img/input.png" />
+      <text>文本输入</text>
+    </view>
+
+  </view>
+
+
+
+
+</view>

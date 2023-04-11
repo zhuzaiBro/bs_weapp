@@ -1,0 +1,14 @@
+<!--pages/article/article.wxml-->
+<!-- <text>pages/article/article.wxml</text> -->
+<!-- <rich-text ></rich-text> -->
+<!-- <web-view src="{{url}}"></web-view> -->
+<!-- <rich-text nodes="{{article}}"></rich-text> -->
+<import src="../../wxParse/wxParse"/>
+<!-- //这里data中article为bindName -->
+<view class="article-page">
+	<view wx:if="{{picUrl}}" class="article-cover">
+		<image src="{{picUrl}}"/>
+	</view>
+	<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+	<!-- <rich-text nodes="{{article.nodes}}"></rich-text> -->
+</view>

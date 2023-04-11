@@ -1,0 +1,90 @@
+.integral-list-page {
+	padding: 30rpx;
+
+	.my-account {
+		position: relative;
+		height: 324rpx;
+		background: linear-gradient(#34cc5f, #007c5f);
+		border-radius: 12px;
+		color: #f5f5f5;
+		padding: 22rpx;
+		overflow: hidden;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 38rpx;
+		.title {
+			font-size: 32rpx;
+			font-weight: 700;
+			text-align: center;
+		}
+		.integral {
+			font-size: 38rpx;
+			font-weight: 700;
+			color: #fff;
+		}
+
+		&:after {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			content: "";
+			display: block;
+			z-index: -1;
+			transform: translate(-50%, -50%);
+			width: 135px;
+			height: 135px;
+			background: linear-gradient(254deg, #ffffff39 0%, rgba(0, 0, 0, 0.00) 100%);
+			border-radius: 50%;
+		}
+
+		&:before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			content: "";
+			display: block;
+			width: 109px;
+			height: 78px;
+			transform: translate(-50%, 50%);
+			background: linear-gradient(254deg, rgba(255, 255, 255, 0.48) 0%, rgba(0, 0, 0, 0.00) 100%);
+			border-radius: 50%;
+		}
+	}
+
+	.get-btn {
+		border-radius: 22rpx;
+		background: linear-gradient(73deg, #34cc5f, #007c5f);
+		
+		color: #fff;
+		:after {
+			display: none;
+			
+		}
+	}
+
+	.integral-area {
+		padding: 22rpx;
+		.integral-rel {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20rpx;
+			padding: 10rpx 0;
+			border-bottom: 1px solid #ececec;
+			align-items: center;
+			.rel-right {
+				color: #5AA548;
+				font-size: 26rpx;
+				font-weight: 700;
+			}
+			.time {
+				margin-top: 12rpx;
+				font-size: 24rpx;
+				color: #666;
+			}
+		}
+	}
+}
+

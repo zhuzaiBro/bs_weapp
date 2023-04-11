@@ -1,0 +1,9 @@
+<view class="fixed-appbar" style="height: {{marginTop + lineHeight+ 'px'}};background: {{bg_color}};">
+	<view class="content" style="margin-top: {{marginTop+ 'px'}}; line-height: {{lineHeight+'px'}};">
+
+		<view class="goback" style="width: {{lineHeight+ 'px'}};height: {{lineHeight+ 'px'}};">
+			<image bindtap="goback" src="../../static/img/back.png" />
+		</view>
+		<view class="info">{{title}}</view>
+	</view>
+</view>

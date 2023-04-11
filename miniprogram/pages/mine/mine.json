@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "appbar": "../../components/appbar/appbar",
+        "auth": "../../components/authorization/authorization" 
+    },
+    "navigationStyle": "custom"
+}

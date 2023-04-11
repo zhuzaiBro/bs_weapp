@@ -1,0 +1,33 @@
+<auth>
+
+	<view class="test-page">
+
+		<swiper class="title-view" current="{{currnetIndex}}" bindchange="handleSwiper">
+			<block wx:for="{{questions}}" wx:key="index">
+				<swiper-item class="page-title" item-id="{{index}}">
+					<view class="quetion-title">
+						{{(index + 1)}}.({{typeMap[item.type]}}) {{item.title}}
+					</view>
+
+					<view class="question-img" wx:if="{{item.picUrl}}">
+						<image src="{{item.picUrl}}" />
+					</view>
+
+					<view data-index="{{index}}" data-ans="{{option[0]}}" bindtap="handleChoose" class="question-option {{item.uAnswer == option[0]? 'on': ''}}" wx:for="{{item.options}}" wx:for-item="option" wx:for-index="j" wx:key="j">
+						{{option}}
+					</view>
+
+				</swiper-item>
+			</block>
+
+		</swiper>
+
+		<view class="control">
+			<button bindtap="handlePrev" wx:if="{{currnetIndex > 0}}">上一题</button>
+			<button bindtap="handleNext" wx:if="{{currnetIndex < questions.length - 1}}">下一题</button>
+			<button bindtap="confirmSubmit" wx:else>提交</button>
+		</view>
+
+	</view>
+
+</auth>

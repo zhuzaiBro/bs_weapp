@@ -1,0 +1,38 @@
+<view class="page-container" style="padding-top: {{marginTop + 'px'}}">
+	<!-- 垫片 -->
+	<!-- <view style="height: {{lineHeight + 'px'}};" class="examing-title"></view> -->
+	<appbar title="考试类目" />
+	<view style="margin-top: {{-marginTop + 'px'}};" class="bg">
+		<image class="bg-img" src="../../static/img/test.png" />
+
+
+	</view>
+	<!-- <view>随便点击下面的方块就可以跳进考试页面</view> -->
+
+	<view class="examination-area">
+		<view class="title">
+			每日环保练习题
+		</view>
+
+		<view class="test-time">
+			2023年1月1日
+		</view>
+
+		<view class="test-info">
+			<view class="title">练习内容</view>
+
+			<view>
+				选择题 10 题，判断题 5 题。
+			</view>
+			<view style="margin-top: 16rpx;">
+				垃圾分类小测试，可以通过测试答题可以获得积分，用户通过答题检验是否掌握相应垃圾的具体分类，学习垃圾分类知识，提升垃圾分类掌握能力，增强垃圾分类意识。
+			</view>
+		</view>
+
+
+	</view>
+
+	<button bindtap="goExam" class="start-btn">开始测试！</button>
+
+
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "积分详情",
+    "usingComponents": {
+        "auth": "../../components/authorization/authorization"
+    }
+}
