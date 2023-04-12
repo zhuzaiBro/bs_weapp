@@ -1,0 +1,20 @@
+<view class="ticket-container">
+
+	<view class="ticket-con">
+		<view class="title-img">
+			<image src="{{goodInfo.banners[0]}}"/>
+		</view>
+
+		<view class="good-info">
+
+			<image class="avatar" src="{{userInfo.avatarUrl}}"/>
+			<view class="share">我通过坚持打卡，在环保小程序中获得了
+				<text style="color: #ff4400;">{{goodInfo.name}}</text>
+			</view>
+		</view>
+
+
+		<button class="get-btn">点击领取</button>
+	</view>
+
+</view>

@@ -1,0 +1,22 @@
+<auth>
+<view class="integral-list-page">
+
+	<view class="integral-area">
+		<navigator target="self" url="/pages/ticket/ticketCon?id={{item.goodId}}" open-type="navigate" class="integral-rel" wx:for="{{ticketList}}" wx:key="index">
+			<view class="rel-left">
+				<image src="{{item.cover}}"/>
+				<view style="margin-right: 8rpx;">{{item.name}}</view>
+				<view class="time">{{item.time}}</view>
+			</view>
+
+			<view class="rel-right">
+				 {{item.num}} 积分
+			</view>
+
+		</navigator>
+	</view>
+
+	
+</view>
+
+</auth>

@@ -7,10 +7,14 @@ export async function fetchGoods(query: string) {
 }
 
 export async function getTodayRel(data:any) {
-	return await request("/api/integral/rel", {}, 'POST')
+	return await request("/api/integral/my/rel", {}, 'POST')
 }
 
 export async function handleExchange(data: any) {
 	return await request("/api/integral/exchange", data, 'POST')
+}
+
+export async function getGoodInfo(id: number) {
+	return await request("/api/integral/detail?goodId="+ id, {} , 'GET')
 }
 

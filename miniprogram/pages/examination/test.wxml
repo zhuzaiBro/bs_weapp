@@ -13,7 +13,7 @@
 						<image src="{{item.picUrl}}" />
 					</view>
 
-					<view data-index="{{index}}" data-ans="{{option[0]}}" bindtap="handleChoose" class="question-option {{item.uAnswer == option[0]? 'on': ''}}" wx:for="{{item.options}}" wx:for-item="option" wx:for-index="j" wx:key="j">
+					<view data-index="{{index}}" data-ans="{{option[0]}}" bindtap="handleChoose" class="question-option {{item.uanswer == option[0]? 'on': ''}}" wx:for="{{item.options}}" wx:for-item="option" wx:for-index="j" wx:key="j">
 						{{option}}
 					</view>
 

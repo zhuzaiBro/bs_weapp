@@ -12,7 +12,9 @@
         "pages/examination/test",
         "pages/recognize/recognize",
         "pages/integralGoods/integralCon",
-        "pages/integral/integralList"
+        "pages/integral/integralList",
+        "pages/ticket/ticket",
+        "pages/ticket/ticketCon"
     ],
     "window": {
         "backgroundTextStyle": "light",

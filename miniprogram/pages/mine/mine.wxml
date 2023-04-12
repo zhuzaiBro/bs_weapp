@@ -52,12 +52,12 @@
 		</view>
 
 		<view class="content">
-			<view class="info-item">
+			<navigator target="self" open-type="navigate" url="/pages/ticket/ticket" class="info-item">
 				<image class="icon" src="../../static/img/integral.png" />
 				<text>兑换记录</text>
 				<image src="../../static/img/arrow_right.png" class="arrow-right" />
-			</view>
-			<view class="info-item">
+			</navigator>
+			<view bindtap="goIntegralList" class="info-item">
 				<image class="icon" src="../../static/img/record.png" />
 				答题记录
 

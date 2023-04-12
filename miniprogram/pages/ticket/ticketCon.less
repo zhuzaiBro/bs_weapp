@@ -1,0 +1,61 @@
+page {
+	background: linear-gradient(rgb(52, 204, 127) 0, #fff 100%);
+
+}
+
+.ticket-container {
+	padding: 30rpx 100rpx;
+	.ticket-con {
+		// border: 2px solid #000;
+		box-shadow: 0 0 3rpx #ececec;
+		height: 60vh;
+		display: flex;
+		flex-direction: column;
+		border-radius: 32rpx;
+		background-color: rgba(245, 245, 245, 0.3);
+		backdrop-filter: blur(9px);
+		padding: 30rpx;
+		.title-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			image {
+				width: 220rpx;
+				height: 220rpx;
+				border-radius: 22rpx;
+			}
+			
+
+		}
+
+		.good-info {
+			margin-top: 22rpx;
+			.avatar {
+				width: 88rpx;
+				height: 88rpx;
+				border-radius: 50%;
+			}
+			.share {
+				color: #222;
+				font-size: 26rpx;
+			}
+		}
+
+		.get-btn {
+			margin: 0 auto;
+			font-size: 32rpx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: auto;
+			
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+
+

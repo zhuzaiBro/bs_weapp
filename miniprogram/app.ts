@@ -2,8 +2,8 @@ import {getUserInfo} from './api/user'
 
 App<IAppOption>({
   globalData: {
-    baseUrl: "http://172.20.10.3:8899",
-    // baseUrl: "https://www.discosoul.com.cn/school",
+    // baseUrl: "http://172.20.10.3:8899",
+    baseUrl: "https://www.discosoul.com.cn/school",
     code: "",
     marginTop: 34,
     lineHeight: 30,

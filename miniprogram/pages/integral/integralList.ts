@@ -80,7 +80,6 @@ Page({
 
     handleDate(d: string) {
         const date = new Date(d)
-        console.log(date)
         return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     },
 

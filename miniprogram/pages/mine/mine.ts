@@ -1,4 +1,6 @@
 import {getTodayRel} from '../../api/integral'
+import {getUserInfo} from '../..//api/user'
+
 
 var a = getApp()
 Page({
@@ -28,36 +30,34 @@ Page({
        })
        getTodayRel({}).then((res: any) => {
            console.log(res.data)
-           const isOK = res.data.reduce((it: any) => it.info=='答题获得奖励')
+           const isOK = res.data.filter((it: any) => it.info=='答题获得奖励').length > 0
            this.setData({
                todayRel: res.data,
-               isStudy: true
+               isStudy: isOK
            })
        })
     },
     /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
      * 生命周期函数--监听页面显示
      */
-    onShow() {
+    async onShow() {
         // 刷新 userInfo 字段
-
-        this.setData({
+        const that = this;
+        const info:any = await getUserInfo()
+        // console.log(info)
+        if(info.code == 200) {
+          getApp().globalData.userInfo = info.data
+        }
+        that.setData({
             userInfo: getApp().globalData.userInfo
         })
+        console.log("我出现了")
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide() {
-        console.log('我消失了')
     },
 
     /**

@@ -45,7 +45,7 @@ Page({
         const index = +e.currentTarget.dataset.index
         const ans = e.currentTarget.dataset.ans;
 
-        this.data.questions[index].uAnswer = ans
+        this.data.questions[index].uanswer = ans
         const arr = this.data.questions
   
         this.setData({ questions: arr })

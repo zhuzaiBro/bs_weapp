@@ -16,7 +16,7 @@
 		<view class="block">
 			<view class=".integral-line">
 				<view class="integral">
-					{{goodInfo.integral}}
+					{{goodInfo.integral}} 积分
 
 				</view>
 
@@ -28,7 +28,7 @@
 			<view class="good-name-line">
 				{{goodInfo.name}}
 			</view>
-
+			<view>库存{{goodInfo.stock}}</view>
 		</view>
 
 		<view class="detail-title">
